@@ -1,0 +1,40 @@
+{% extends "User/base.html" %}
+{% load static %}
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'User/lo_re_ve.css' %}">
+{% endblock %}
+    
+
+
+{% block title %}
+    Login
+{%  endblock %}
+
+
+{% block content %}
+    {% if message %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+    <section class="comment-block">
+        <h1>Login</h1>
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            {% for element in form %}
+                <div class="form-control">
+                    {{ element.label_tag }}
+                    {{ element }}
+                    {{ element.errors }}
+                </div>
+            {% endfor %}
+            <button>submit</button>
+        </form>
+    </section>
+
+    
+{% endblock %}

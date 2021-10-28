@@ -1,0 +1,60 @@
+{% extends "User/base.html" %}
+
+{% load static %}
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static  'User/index.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    All Posts
+{%  endblock %}
+
+
+{% block content %}
+
+    {% if form.errors %}
+        <div id="alert-box">
+            <h2>Saving the comment failed!</h2>
+            <p>Please check the Post form below and fix the errors</p>
+            <a href="#box">Fix</a>
+        </div>
+    {% endif %}
+
+    <h2>Available Posts</h2>
+    <div id="all-posts">
+        <ul>
+            {% for post in all_objects %}
+                <li>
+                    <p>{{ post.text }}</p>
+                    <span>posted by : {{ post.user.username }}</span>
+                    <span>Last updated on <time>{{ post.updated_at|date:"D d M Y" }}</time></span>
+                </li>
+            {% empty %}
+                <h2 id="empty">There are no posts available.</h2>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <section id = "box" class="post-block">
+        <h2>Add your post</h2>
+        <form action="{% url 'add' %}" method="POST">
+            {% csrf_token %}
+            {% for element in form %}
+                <div class="form-control {% if element.errors %}invalid{% endif %}">
+                    {{ element.label_tag }}
+                    {{ element }}
+                    {{ element.errors }}
+                </div>
+            {% endfor %}
+            <button>Submit</button>
+        </form>
+    </section>
+
+
+    
+    
+
+
+{% endblock %}

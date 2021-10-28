@@ -1,0 +1,16 @@
+{% extends "User/base.html" %}
+
+{% block title %}
+    Success
+{%  endblock %}
+
+
+{% block content %}
+    <div style="width: 90%; margin: auto;" class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Logged out successfully</h4>
+        <p>Please click on the below button and navigate to Home page</p>
+        <hr>
+        <a class="btn btn-primary" href="{% url 'home' %}" role="button">GoTo Home</a>
+    </div>
+    
+{% endblock %}

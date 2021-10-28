@@ -1,0 +1,114 @@
+h2 {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+
+.form-control {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control input, .form-control textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid gray;
+    font-weight: 100;
+}
+
+
+.post-block {
+    max-width: 40rem;
+    width: 90%;
+    margin: 3rem auto;
+    border-radius: 12px;
+    background-color: #e8e8e8;;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+.post-block button {
+    border: 1px solid black;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #390281;
+    color: white;
+}
+
+.post-block button:hover {
+    background-color: #420396;
+    border-color: #420396;
+}
+
+.errorlist {
+    list-style: none;
+    margin: 0.5rem 0; 
+    padding: 0;
+    color: rgb(151, 6, 6);
+    font-weight: 100;
+}
+
+
+.invalid label {
+    color: rgb(151, 6, 6);
+}
+
+.invalid input, .invalid textarea {
+    background-color: rgb(254, 208, 208);
+    border-color: rgb(151, 6, 6);
+}
+
+#alert-box {
+    border: 1px solid #972523;
+    margin: 1rem 20rem 0px 20rem;
+    background-color: #fdd0d0;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+#alert-box h2, #alert-box p {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+
+#alert-box a {
+    margin-left: 45%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #972523;
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    background-color: #972523;
+}
+
+#all-posts {
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 1rem 2rem;
+}
+
+#all-posts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#all-posts li {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1rem;
+}
+
+#all-posts li:last-of-type {
+    border: none;
+    padding-bottom: 0;
+}

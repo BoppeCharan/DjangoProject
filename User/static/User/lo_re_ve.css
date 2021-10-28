@@ -1,0 +1,37 @@
+.form-control {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control input, .form-control textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid gray;
+    font-weight: 100;
+}
+
+.comment-block {
+    max-width: 40rem;
+    width: 90%;
+    margin: 3rem auto;
+    border-radius: 12px;
+    background-color: #e8e8e8;;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+.comment-block button {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+    background-color: rgb(68, 67, 67);
+}
+
+.comment-block button:hover {
+    background-color: rgb(83, 83, 83);;
+}
